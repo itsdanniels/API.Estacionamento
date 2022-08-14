@@ -6,7 +6,8 @@ namespace Api.Estacionamento.Services.Interfaces
 {
     public interface IEstacionamentoService
     {
-        Task<Veiculo> GetVeiculos(int id);
+        Task<Veiculo> GetVeiculoNoPatio(string placa);
         Task<bool> CadastroVeiculo(VeiculoDTO veiculo);
+        Task<bool> SaidaVeiculo(string placa);
     }
 }

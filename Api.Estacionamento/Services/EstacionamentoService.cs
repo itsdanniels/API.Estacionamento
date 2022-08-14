@@ -17,9 +17,9 @@ namespace Api.Estacionamento.Services
             _estacionamentoRepository = new EstacionamentoRepository(connectionFactory);
         }
 
-        public Task<Veiculo> GetVeiculos(int id)
+        public Task<Veiculo> GetVeiculoNoPatio(string placa)
         {
-            var dados = _estacionamentoRepository.GetVeiculos(id);
+            var dados = _estacionamentoRepository.GetVeiculoNoPatio(placa);
 
             return dados;
         }
@@ -27,6 +27,13 @@ namespace Api.Estacionamento.Services
         public Task<bool> CadastroVeiculo(VeiculoDTO veiculo)
         {
             var dados = _estacionamentoRepository.CadastroVeiculo(veiculo);
+
+            return dados;
+        }
+
+        public Task<bool> SaidaVeiculo(string placa)
+        {
+            var dados = _estacionamentoRepository.SaidaVeiculo(placa);
 
             return dados;
         }

@@ -8,7 +8,9 @@ namespace Api.Estacionamento.Models
         public string Placa { get; set; }
         public string Cor { get; set; }
         public TipoVeiculo Tipo { get; set; }
+        public DateTime Entrada { get; set; }
         public string Modelo { get; set; }
         public string Proprietario { get; set; }
+        public Double Valor { get; set; }
     }
 }
